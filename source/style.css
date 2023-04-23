@@ -9,8 +9,8 @@ body {
 header {
   margin: 0 auto;
   padding: 150px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
-    url(../images/man-holding-camera.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -133,15 +133,14 @@ footer li {
 .grid-3-equal-columns {
   grid-template-columns: 1fr 1fr 1fr;
 }
-.grid-3-narrow-beginning {
-  grid-template-columns: 1fr 3fr 3fr;
+.grid-3-columns-1-narrow {
+  grid-template-columns: 3fr 3fr 1fr;
 }
 .secondary-main {
   background-color: rgba(10, 14, 0, 0.1);
 }
 .card {
   background-color: white;
-
   margin-top: 30px;
 }
 .card-body {
@@ -152,12 +151,16 @@ footer li {
   margin: 0 auto;
   text-align: center;
 }
+.third-main h3 {
+  margin-bottom: 30px;
+}
 .text-center {
   text-align: center;
 }
 .img-responsive {
   width: 100%;
 }
+
 @media (max-width: 1280px) {
   .grid {
     grid-template-columns: 1fr;
@@ -172,6 +175,12 @@ footer li {
   .primary-main p {
     width: 80%;
     margin: 0px auto;
+  }
+  .secondary-main img {
+    display: none;
+  }
+  footer {
+    text-align: center;
   }
 }
 @media (max-width: 960px) {
