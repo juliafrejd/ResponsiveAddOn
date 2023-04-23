@@ -16,7 +16,6 @@ header {
   text-align: center;
   color: white;
 }
-
 header h1 {
   font-weight: 700;
   font-size: 64px;
@@ -43,10 +42,40 @@ header a {
   margin-top: 28px;
   padding: 16px 32px;
 }
-.project-link {
-  font-weight: 400;
-  font-size: 12px;
-  text-align: center;
+section {
+  margin: 0 auto;
+  padding: 80px;
+}
+main img {
+  max-width: 100%;
+}
+main h2 {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin: 0;
+  padding: 0;
+}
+main h3 {
+  font-weight: 700;
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+}
+main p {
+  max-height: fit-content;
+}
+main a {
+  background-color: black;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 28px;
+  padding: 16px 32px;
 }
 footer {
   color: white;
@@ -56,8 +85,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
-  padding: 30px;
 }
 footer h3 {
   font-weight: 700;
@@ -82,20 +109,37 @@ footer li {
   padding: 0;
   margin: 5px 0;
 }
-section {
-  width: 1200px;
-  margin: 0 auto;
-}
 .grid {
   display: grid;
+  grid-gap: 64px;
+}
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-2 div {
+  margin: 0 auto;
+}
+.grid-3-narrow-beginning {
   grid-template-columns: 1fr 3fr 3fr;
 }
-.grid div {
-  margin: 0 15px;
+@media (max-width: 1280px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+    text-align: center;
+  }
+  main img {
+    width: 60%;
+  }
+  main p {
+    width: 80%;
+    margin: 0px auto;
+  }
 }
 @media (max-width: 960px) {
-  header {
-    padding: 60px;
+  header,
+  section {
+    padding: 50px;
   }
   header h1 {
     font-size: 42px;
@@ -104,5 +148,15 @@ section {
   header h2,
   header h3 {
     font-size: 14px;
+  }
+  main img {
+    width: 100%;
+  }
+  main h3 {
+    margin: 10px 0;
+  }
+  main p {
+    width: 100%;
+    margin: 0 auto;
   }
 }
